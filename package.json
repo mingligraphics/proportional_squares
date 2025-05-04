@@ -23,7 +23,7 @@
 		"prompts": "2.4.2",
 		"style-loader": "4.0.0",
 		"superagent": "7.1.1",
-		"svelte": "5.28.2",
+		"svelte": "4.2.2",
 		"svelte-loader": "3.2.4",
 		"terser-webpack-plugin": "5.3.1",
 		"webpack": "5.73.0",

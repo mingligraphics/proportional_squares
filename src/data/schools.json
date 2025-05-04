@@ -1,0 +1,79 @@
+[
+    {
+      "ranking": 1,
+      "university": "Princeton",
+      "code": "Princeton",
+      "intl_students": 2318,
+      "share_china": 0.359
+    },
+    {
+      "ranking": 2,
+      "university": "MIT",
+      "code": "MIT",
+      "intl_students": 4073,
+      "share_china": 0.244
+    },
+    {
+      "ranking": 3,
+      "university": "Harvard University",
+      "code": "Harvard",
+      "intl_students": 5627,
+      "share_china": 0.228
+    },
+    {
+      "ranking": 5,
+      "university": "Yale",
+      "code": "Yale",
+      "intl_students": 3735,
+      "share_china": 0.345
+    },
+    {
+      "ranking": 6,
+      "university": "Northwestern",
+      "code": "Northwestern",
+      "intl_students": 9500,
+      "share_china": 0.181
+    },
+    {
+      "ranking": 6,
+      "university": "Duke University",
+      "code": "Duke",
+      "intl_students": 5949,
+      "share_china": 0.473
+    },
+    {
+      "ranking": 11,
+      "university": "Cornell University",
+      "code": "Cornell",
+      "intl_students": 6943,
+      "share_china": 0.496
+    },
+    {
+      "ranking": 13,
+      "university": "Columbia University",
+      "code": "Columbia",
+      "intl_students": 13745,
+      "share_china": 0.47
+    },
+    {
+      "ranking": 15,
+      "university": "University of California, Los Angeles",
+      "code": "UCLA",
+      "intl_students": 6437,
+      "share_china": 0.479
+    },
+    {
+      "ranking": 17,
+      "university": "University of California, Berkeley",
+      "code": "UC Berkley",
+      "intl_students": 7355,
+      "share_china": 0.356
+    },
+    {
+      "ranking": 18,
+      "university": "Rice University",
+      "code": "Rice",
+      "intl_students": 2344,
+      "share_china": 0.488
+    }
+  ]
