@@ -6,16 +6,19 @@
   import { cubicOut } from "svelte/easing";
   import { interpolate } from "d3-interpolate";
   import { fly, fade, scale } from 'svelte/transition';
+  import Steps from "/components/Steps.svelte";
+  let currentStep;
+
   console.log(data);
 
   let width = 700;
-  let height = 500;
+  let height = 550;
 
-  let background_Color = "#C6E8EB";
+  let background_Color = "#C6E8EB";//#CED3DD #C6E8EB
   let share_Color = "#683C8F";
   
   const margin = {
-      top:0,
+      top:30,
       right: 10,
       bottom: 0,
       left: 50
@@ -99,6 +102,30 @@ $: tweenedPoints = tweened(newData_before, {
     });
 
 $:  tweenedPoints.set(newData_after);
+
+const prev2Intl_value = 2318;
+const prev1Intl_value = 4073;
+const annotation_value = 5627;
+
+$: annotation_x1 =  (max_Column1 + rScale(prev2Intl_value))/2 + rScale(prev1Intl_value) + 2 * gap - rScale(annotation_value)/2;
+$: annotation_y1 = (max_A - rScale(annotation_value))/2;
+
+$: annotation_x2 = annotation_x1 + 15;
+$: annotation_y2 = annotation_y1 - 10;
+
+// $: annotation_cx = (annotation_x1 + annotation_x2) / 2;
+// $: annotation_cy = annotation_y1 - 10;
+
+$: console.log(processedData);
+
+let showAnnotations = false;
+
+$: if ($tweenedPoints && $tweenedPoints.length && !showAnnotations) {
+  // Wait until tween animation duration (3000 ms) + delay
+  setTimeout(() => {
+    showAnnotations = true;
+  }, 3100); // 3000 + a buffer
+}
 </script>
 
 <main>
@@ -158,6 +185,32 @@ $:  tweenedPoints.set(newData_after);
         {d.code}
         </text>
         {/each}
+        <!-- {#if showAnnotations}
+        <g transition:fade={{ duration: 1000 }}>
+        <line
+        x1={annotation_x1 + 0.75 * rScale(annotation_value)}
+        y1={annotation_y1 + 5}
+        x2={annotation_x1 + 0.75 * rScale(annotation_value)}
+        y2={annotation_y2 + 5}
+        stroke="black"
+        stroke-width="1.5"
+       />
+        <text class="annotation" x={annotation_x1} y={annotation_y1 - 10} font-size="12px">
+         international students
+        </text>
+        <line
+        x1={annotation_x1 + 1.25 * rScale(annotation_value)}
+        y1={annotation_y1 + rScale(annotation_value) + 5}
+        x2={annotation_x1 + 1.25 * rScale(annotation_value)}
+        y2={annotation_y2 + rScale(annotation_value) + 5}
+        stroke="black"
+        stroke-width="1.5"
+        />
+        <text class="annotation" x={annotation_x1 + 0.75 * rScale(annotation_value)} y={annotation_y1 + rScale(annotation_value) + 20} font-size="12px">
+          from China
+        </text>
+        </g>
+        {/if} -->
         {#each $tweenedPoints as d}
         <rect
         x={
@@ -188,6 +241,7 @@ $:  tweenedPoints.set(newData_after);
       </svg>
     </div>
   </div>
+  <Steps bind:currentStep/>
   </section>
   </main>
   
@@ -223,4 +277,9 @@ $:  tweenedPoints.set(newData_after);
       font-family: Retina, sans-serif;
       text-transform: uppercase;
     }
+
+    /* .annotation{
+      font-family: Retina, sans-serif;
+      font-size: 15px;
+    } */
   </style>
