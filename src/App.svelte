@@ -14,7 +14,7 @@
   let width = 700;
   let height = 550;
 
-  let background_Color = "#C6E8EB";//#CED3DD #C6E8EB
+  let background_Color = "#CED3DD";//#CED3DD #C6E8EB
   let share_Color = "#683C8F";
   
   const margin = {
