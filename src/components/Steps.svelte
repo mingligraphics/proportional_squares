@@ -6,8 +6,10 @@
     `At several top U.S. universities,
     <span style="background-color:#AC8FBE;padding:3.5px;margin:1px;border-radius:4px;font-weight:500;color:white;">Chinese students</span>
      make up a large share of the <span style="background-color:#CED3DD;padding:3.5px;margin:1px;border-radius:4px;font-weight:500">international student body</span>. 
-     At schools like Cornell and Columbia, nearly half of international students are from China.
-     <br><br><span style="color: #727272;font-weight: 300; font-family: Retina, sans-serif;font-size: 13px;line-height: 17px; margin-top:6px;">Note: Most recent available data from the top 20 universities <br> Sources: Universities (student data); top 20 list (U.S. news & World Report)</span>`,
+     At Harvard, 23% of international students are from China. At Columbia, the share is nearly 50%.
+    <br><p style="color: #727272;font-weight: 300; font-family: Retina, sans-serif;font-size: 13px;line-height: 17px; margin-top:6px;">Note: Most recent available data from the top 20 universities
+      <br>Sources: the universities (student data); U.S. News & World Report (top 20 list)</p>`,
+// <br><br><span style="color: #727272;font-weight: 300; font-family: Retina, sans-serif;font-size: 13px;line-height: 17px; margin-top:6px;">Note: Most recent available data from the top 20 universities <br>Sources: the universities (student data); U.S. News & World Report (top 20 list)</span>
 //     `Note: Data as of May 3. Downloads data are not available for episodes released from Nov. 2015 to Oct. 2017. Episodes within the past 180 days are projected downloads. The Porsche episode does not include YouTube data.
 // <br>Source: Acquired's analysis of data from Transistor, Libsyn, Spotify and YouTube`
   ];
@@ -66,6 +68,15 @@
   z-index: 2;
   pointer-events: none;
 }
+
+/* .footnote{
+    color: #727272;
+    font-weight: 300;
+    font-family: Retina, sans-serif;
+    font-size: 13px;
+    line-height: 17px;
+    margin-top:4px;
+  } */
 
 /* mark{
   padding-top: 3px;

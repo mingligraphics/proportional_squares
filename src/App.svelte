@@ -12,15 +12,15 @@
   console.log(data);
 
   let width = 700;
-  let height = 550;
+  let height = 530;
 
   let background_Color = "#CED3DD";//#CED3DD #C6E8EB
   let share_Color = "#683C8F";
   
   const margin = {
-      top:30,
+      top:15,
       right: 10,
-      bottom: 0,
+      bottom: 15,
       left: 50
     };
 
@@ -282,4 +282,5 @@ $: if ($tweenedPoints && $tweenedPoints.length && !showAnnotations) {
       font-family: Retina, sans-serif;
       font-size: 15px;
     } */
+
   </style>
